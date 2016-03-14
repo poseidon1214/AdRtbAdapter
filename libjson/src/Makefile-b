@@ -1,0 +1,29 @@
+# Author:	Lily
+# Date:		2013_11_20
+
+CC = g++
+CFLAGS = -g -Wall
+
+
+GT_ENV ?= $(shell pwd)/../../
+
+JSON_ENV ?= $(GT_ENV)/jsoncpp
+JSON_INC ?= $(JSON_ENV)/inc
+JSON_SRC ?= $(JSON_ENV)/src
+
+JSON_READER = json_reader
+JSON_WRITER = json_writer
+JSON_VALUE = json_value
+
+OBJECTS = 			\
+	$(JSON_READER).o	\
+	$(JSON_WRITER).o	\
+	$(JSON_VALUE).o
+
+all: $(OBJECTS)
+
+$(OBJECTS): %.o: %.cpp
+	$(CC) -c $(CFLAGS) -I$(JSON_INC) $< -o $@
+
+clean:
+	rm -rf $(OBJECTS)

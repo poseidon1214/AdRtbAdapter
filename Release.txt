@@ -1,0 +1,55 @@
+Release: v2.0.0  
+Date: 201511261000
+Svn: 119
+
+Release:v2.0.1
+Date: 201512011540
+Svn: 130
+
+Release:v2.0.2
+Date:201512101615
+Svn:157
+
+Release:v2.0.3
+Date:201512141054
+Svn:166
+
+Release:v2.0.4
+Date:201512221055
+Svn:176
+
+Release:v2.0.5
+Date:201512241614
+Svn:187
+
+Release:v2.0.6
+Date:201512291121
+Svn:196
+
+Release:v2.0.7(no release)
+Date:201512291121
+Svn:217
+
+Release:v2.0.8(no release)
+Date:201512291127
+Svn:222
+
+Release:v2.0.9
+Date:201601281024
+Svn:224
+
+Release:v2.0.11
+Date:20160218
+Svn:248
+
+Release:v2.0.12
+Date:20160218
+Svn:250
+
+Release:v2.0.13
+Date:20160224
+Svn:261
+
+Reease:v2.0.14
+Date:20160225
+Svn:267
