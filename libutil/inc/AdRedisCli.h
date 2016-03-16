@@ -30,10 +30,10 @@ class AdRedisCli
 {
 public:
 	AdRedisCli();
-	AdRedisCli(string& sIp, int iPort);
+	AdRedisCli(string& sIp, int iPort, string password="");
 	virtual ~AdRedisCli();
 
-	int AdRedisConnect(string& strIp, int port);
+	int AdRedisConnect(string& strIp, int port, string password="");
 	int AdRedisConnect(void);
 	void AdRedisClose();
 
@@ -70,8 +70,9 @@ public:
 
 protected:
 	AdRedisClient *m_pGtCli;		
-        string m_sIp;
-        int  m_iPort;
+	string m_sIp;
+	string m_sPasswd;
+	int  m_iPort;
 private:
 
 };

@@ -21,15 +21,17 @@ AdRedisCli::AdRedisCli()
 {
 	m_pGtCli = NULL;
 	m_sIp.clear();
+	m_sPasswd.clear();
 	m_iPort = 0;
 }
 
 
-AdRedisCli::AdRedisCli(string & sIp, int iPort)
+AdRedisCli::AdRedisCli(string & sIp, int iPort, string password)
 {
 	m_pGtCli = NULL;
 	m_sIp = sIp;
 	m_iPort = iPort;
+	m_sPasswd = password;
 }
 
 AdRedisCli::~AdRedisCli()
@@ -51,6 +53,18 @@ int AdRedisCli::AdRedisConnect()
 		AdRedisClose();
 		return AD_FAILURE;
 	}
+	if(m_sPasswd.size()> 0)
+	{
+		redisReply *reply;
+		reply = (redisReply *)redisCommand(m_pGtCli, "AUTH %s", m_sPasswd.c_str());
+		if (reply->type == REDIS_REPLY_ERROR) {
+			/* Authentication failed */
+			AD_ERROR("Redis Authentication failed");
+			freeReplyObject(reply);
+			return AD_FAILURE;
+		}
+		freeReplyObject(reply);
+	}
 	return AD_SUCCESS;
 }
 
@@ -63,7 +77,7 @@ void AdRedisCli::AdRedisClose()
 	}
 }
 
-int AdRedisCli::AdRedisConnect(string& sIp, int iPort)
+int AdRedisCli::AdRedisConnect(string& sIp, int iPort, string Passwd)
 {
 	m_sIp = sIp;
 	m_iPort = iPort;
@@ -72,6 +86,18 @@ int AdRedisCli::AdRedisConnect(string& sIp, int iPort)
 	{
 		AdRedisClose();
 		return AD_FAILURE;
+	}
+	if(Passwd.size()> 0)
+	{
+		redisReply *reply;
+		reply = (redisReply *)redisCommand(m_pGtCli, "AUTH %s", Passwd.c_str());
+		if (reply->type == REDIS_REPLY_ERROR) {
+			/* Authentication failed */
+			AD_ERROR("Redis Authentication failed");
+			freeReplyObject(reply);
+			return AD_FAILURE;
+		}
+		freeReplyObject(reply);
 	}
 	return AD_SUCCESS;
 }

@@ -43,6 +43,10 @@ AdFilterFrequence::~AdFilterFrequence()
 
 int AdFilterFrequence::match(void * data, AD_RESULT & mResult)
 {
+
+# ADD
+	return AD_SUCCESS;
+
 	AD_RESULT_ITER iter;
 	AdPlanningUnit * pUnit;
 	char sStr[AD_BYTE512];

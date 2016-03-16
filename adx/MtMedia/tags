@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AD_URL	AdProtocolMtMedia.cpp	14;"	d	file:
+AdPrivateInfo	AdProtocolMtMedia.h	/^	AdPrivateInfo()$/;"	f	class:AdPrivateInfo
+AdPrivateInfo	AdProtocolMtMedia.h	/^class AdPrivateInfo$/;"	c
+AdProtocolInit	AdProtocolMtMedia.cpp	/^AdProtocolBase * AdProtocolInit()$/;"	f
+AdProtocolWeiBo	AdProtocolMtMedia.h	/^	AdProtocolWeiBo(){};$/;"	f	class:AdProtocolWeiBo
+AdProtocolWeiBo	AdProtocolMtMedia.h	/^class AdProtocolWeiBo:public AdProtocolBase$/;"	c
+EmptyToHttp	AdProtocolMtMedia.cpp	/^int AdProtocolMtMedia::EmptyToHttp(AdAdapterPara * pPara)$/;"	f	class:AdProtocolMtMedia
+HttpToInternal	AdProtocolMtMedia.cpp	/^int AdProtocolMtMedia::HttpToInternal(AdAdapterPara * pPara)$/;"	f	class:AdProtocolMtMedia
+InternalToHttp	AdProtocolMtMedia.cpp	/^int AdProtocolMtMedia::InternalToHttp(AdAdapterPara * pPara)$/;"	f	class:AdProtocolMtMedia
+__AD_PROTOCOL_H__	AdProtocolMtMedia.h	10;"	d
+clear	AdProtocolMtMedia.h	/^	void clear()$/;"	f	class:AdPrivateInfo
+lib-m	Makefile	/^lib-m = AdProtocolWeiBo.so$/;"	m
+m_sDealID	AdProtocolMtMedia.h	/^	string m_sDealID;$/;"	m	class:AdPrivateInfo
+m_sIMEI	AdProtocolMtMedia.h	/^    string m_sIMEI;$/;"	m	class:AdPrivateInfo
+m_sImpId	AdProtocolMtMedia.h	/^	string m_sImpId;$/;"	m	class:AdPrivateInfo
+m_sMd5	AdProtocolMtMedia.h	/^	string m_sMd5;$/;"	m	class:AdPrivateInfo
+m_sSHA	AdProtocolMtMedia.h	/^	string m_sSHA;$/;"	m	class:AdPrivateInfo
+static-lib-y	Makefile	/^static-lib-y = $(target-y)\/json.so$/;"	m
+~AdPrivateInfo	AdProtocolMtMedia.h	/^	~AdPrivateInfo(){};$/;"	f	class:AdPrivateInfo
+~AdProtocolWeiBo	AdProtocolMtMedia.h	/^	virtual ~AdProtocolWeiBo(){};$/;"	f	class:AdProtocolWeiBo

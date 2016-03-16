@@ -30,7 +30,11 @@ int AdAdapterMethod::Get(AdAdapterPara & ctPara)
 	ret = AdHttp::GetPostUri(*ctPara.m_pCacheIn,   str);
 	if (AD_SUCCESS != ret) 
 	{
-		return AD_FAILURE;
+		ret = AdHttp::GetGetUri(*ctPara.m_pCacheIn,   str);
+		if(AD_SUCCESS != ret )
+		{
+			return AD_FAILURE;
+		}
 	}
 	
 	//find adx

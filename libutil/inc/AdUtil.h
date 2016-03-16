@@ -328,6 +328,12 @@ public:
 		return GetAttr(ctCache,  "POST ", sValue);
 	};
 
+	static inline int GetGetUri(AdCache & ctCache, std::string & sValue)
+	{
+		return GetAttr(ctCache,  "GET ", sValue);
+	};
+
+
 	static inline int GetHost(AdCache & ctCache, std::string & sValue)
 	{
 		return GetAttr(ctCache,  "Host: ", sValue);
