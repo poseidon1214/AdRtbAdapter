@@ -28,7 +28,7 @@ public:
 	AdAdpFilterBan();
 	virtual ~AdAdpFilterBan();
 
-	int Init(string & sServer);
+	int Init(string & sServer, string passwd = "");
 	bool Match(AdRtbRequest * pRequest);
 	int Update();
 	

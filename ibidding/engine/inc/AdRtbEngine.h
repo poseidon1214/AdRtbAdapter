@@ -94,7 +94,7 @@ public:
 		}
 	};
 
-	INT32 AdRtbStatusUpdate( string & server)
+	INT32 AdRtbStatusUpdate( string & server, string passwd="")
 	{
 		if(server.empty())
 			return AD_FAILURE;
@@ -109,7 +109,7 @@ public:
 		string sFiled;
 		string sDay;
 		
-		AdRedisCli   ctRedis(vStr[0], atoi(vStr[1].c_str()));
+		AdRedisCli   ctRedis(vStr[0], atoi(vStr[1].c_str()), password = passwd);
 		int ret;
 
 		

@@ -98,7 +98,7 @@ int AdAdapter::AdAdapterInit(string & sConf, bool m_bBidding)
 	cout<<"Adapter Loading Ban list...................................."<<endl;
 	string sSec = "[GLOBAL]";
 	ADCONFIG & gConf = ctConf.Get(sSec);
-	ret = m_ctBanFilter.Init(gConf["REDIS"]);
+	ret = m_ctBanFilter.Init(gConf["REDIS"], gConf["REDIS_PASSWD"]);
 	if(ret != AD_SUCCESS)
 	{
 		AD_ERROR("Ban Filter Init error\n");

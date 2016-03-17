@@ -207,7 +207,7 @@ int AdRtbEngine:: AdRtbEngineRun(char * pPacket, int iLen, int iMaxLen, AdTask &
 	if(pStatus != NULL)
 	{
 		pStatus->AdRtbStatusResponseAdd();
-		pStatus->AdRtbStatusUpdate(gConf["REDIS_REALTIME"]);
+		pStatus->AdRtbStatusUpdate(gConf["REDIS_REALTIME"], gConf["REDIS_PASSWD"]);
 	}
 
 ERROR:
@@ -287,7 +287,7 @@ int AdRtbEngine:: AdRtbEngineRun(AdRtbRequest & ctRequest, AdRtbResponse & ctRes
 	if(pStatus != NULL)
 	{
 		pStatus->AdRtbStatusResponseAdd();
-		pStatus->AdRtbStatusUpdate(gConf["REDIS_REALTIME"]);
+		pStatus->AdRtbStatusUpdate(gConf["REDIS_REALTIME"], gConf["REDIS_PASSWD"]);
 	}
 	
 	if((ctTask.m_uiPrint & AD_ENGINE_PRINT_RESPONSE) != 0)

@@ -12,11 +12,11 @@ src-y += libcommon/src/
 src-y += control/src/
 src-y += ibidding/
 src-y += adapter/
-src-y += adx/
 src-y	+= AdRtbInfo/
 src-y	+= AdRtbCopy/
-src-y	+= AdExchange/
-src-y	+= AdAdpLog/
+#src-y += adx/
+#src-y	+= AdExchange/
+#src-y	+= AdAdpLog/
 
 endif
 include build.mk

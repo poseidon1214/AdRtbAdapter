@@ -42,7 +42,7 @@ bool AdAdpFilterBan::Match(AdRtbRequest * pRequest)
 }
 
 
-int AdAdpFilterBan::Init(string & sServer)
+int AdAdpFilterBan::Init(string & sServer, string passwd = "")
 {
 	int ret;
 	vector<string> vStr;
@@ -52,6 +52,7 @@ int AdAdpFilterBan::Init(string & sServer)
 	
 	m_sIp = vStr[0];
 	m_iPort = atoi(vStr[1].c_str());
+	m_sPasswd = passwd;
 	ret = Update();
 	if(ret != AD_SUCCESS)
 	{
