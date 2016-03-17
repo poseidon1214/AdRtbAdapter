@@ -109,7 +109,7 @@ public:
 		string sFiled;
 		string sDay;
 		
-		AdRedisCli   ctRedis(vStr[0], atoi(vStr[1].c_str()), password = passwd);
+		AdRedisCli   ctRedis(vStr[0], atoi(vStr[1].c_str()), passwd);
 		int ret;
 
 		

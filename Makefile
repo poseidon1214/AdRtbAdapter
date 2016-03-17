@@ -14,7 +14,7 @@ src-y += ibidding/
 src-y += adapter/
 src-y	+= AdRtbInfo/
 src-y	+= AdRtbCopy/
-#src-y += adx/
+src-y += adx/
 #src-y	+= AdExchange/
 #src-y	+= AdAdpLog/
 

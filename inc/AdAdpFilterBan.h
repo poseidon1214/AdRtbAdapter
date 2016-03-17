@@ -35,6 +35,7 @@ public:
 private:
 	AdPingPongBuffer<map<string, UINT> >m_mBan;
 	string  m_sIp;
+	string m_sPasswd;
 	int  m_iPort;
 };
 

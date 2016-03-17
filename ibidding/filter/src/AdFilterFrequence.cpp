@@ -44,7 +44,7 @@ AdFilterFrequence::~AdFilterFrequence()
 int AdFilterFrequence::match(void * data, AD_RESULT & mResult)
 {
 
-# ADD
+//ADD
 	return AD_SUCCESS;
 
 	AD_RESULT_ITER iter;

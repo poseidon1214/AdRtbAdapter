@@ -42,7 +42,7 @@ bool AdAdpFilterBan::Match(AdRtbRequest * pRequest)
 }
 
 
-int AdAdpFilterBan::Init(string & sServer, string passwd = "")
+int AdAdpFilterBan::Init(string & sServer, string passwd)
 {
 	int ret;
 	vector<string> vStr;
@@ -72,7 +72,7 @@ int AdAdpFilterBan::Update()
 	list<string>::iterator iter;
 	map<string, UINT> & mBan = m_mBan.GetBack();
 	
-	ret = ctRedis.AdRedisConnect(m_sIp, m_iPort);
+	ret = ctRedis.AdRedisConnect(m_sIp, m_iPort, m_sPasswd);
 	if(ret != AD_SUCCESS)
 	{
 		AD_ERROR("Redis connect error\n");
