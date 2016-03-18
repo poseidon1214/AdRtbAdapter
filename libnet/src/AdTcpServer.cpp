@@ -76,7 +76,7 @@ int AdTcpServer::TcpServerInit( int iPort,  bool  bBlock)
 		 return AD_FAILURE;
 	}
 
-	ret= listen(m_iServerSocket, 20);
+	ret= listen(m_iServerSocket, 2048);
 	if(ret != AD_SUCCESS)
 	{
 		 AD_ERROR("Socket listen Error\n");
